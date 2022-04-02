@@ -1,0 +1,21 @@
+node_modules
+.*
+/__*__
+/examples
+/*config*
+
+# local env files
+*.local
+
+# Log files
+*.log*
+
+# Editor directories and files
+.idea
+.vscode/*
+!.vscode/settings.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

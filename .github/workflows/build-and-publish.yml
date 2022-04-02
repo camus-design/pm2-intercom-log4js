@@ -1,0 +1,52 @@
+name: Build And Publish
+on:
+  push:
+    branches:
+      - main
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [ '10', '12', '14', '16' ]
+    name: Testing on node ${{ matrix.node }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Initial node enviroment
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm install
+      - run: npm run test
+  build-publish-tag:
+    needs:
+      - testing
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Initial node enviroment
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: npm install
+      - run: npm run build
+      - name: Publish
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_ACCESS_TOKEN }}
+          access: public
+      - name: Read package.json
+        uses: tyankatsu0105/read-package-version-actions@v1
+        id: package-version
+      - name: Create Release for Tag
+        id: release_tag
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ steps.package-version.outputs.version }}
+          release_name: Release v${{ steps.package-version.outputs.version }}
+          prerelease: false
+          body: 'Click [change log](https://github.com/BillionBottle/pm2-intercom-log4js/blob/main/CHANGELOG.md) to see more.'

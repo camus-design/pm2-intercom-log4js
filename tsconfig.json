@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "skipLibCheck": true,
+    "useDefineForClassFields": true,
+    "module": "ES2015",
+    "moduleResolution": "node",
+    "strict": true,
+    "sourceMap": false,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "lib": ["ES2015"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@type/*": [
+        "types/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*.ts", "src/**/*.d.ts",
+    "types/**/*.ts", "types/**/*.d.ts"
+  ]
+}

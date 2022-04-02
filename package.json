@@ -1,0 +1,56 @@
+{
+  "name": "@takin/pm2-intercom-log4js",
+  "version": "1.0.0",
+  "description": "A tool to solve log4js log synchronization in pm2 multithreading.",
+  "keywords": [
+    "pm2",
+    "log4js",
+    "intercom"
+  ],
+  "main": "dist/index.min.js",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "test": "jest --runInBand --forceExit",
+    "lint": "eslint --fix --ext .ts src",
+    "build": "npm run test && rollup -c"
+  },
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BillionBottle/pm2-intercom-log4js.git"
+  },
+  "author": "Juner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BillionBottle/pm2-intercom-log4js/issues"
+  },
+  "homepage": "https://github.com/BillionBottle/pm2-intercom-log4js",
+  "engines": {
+    "node": ">= 8.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.2",
+    "@rollup/plugin-eslint": "^8.0.1",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "@swc-node/jest": "^1.4.3",
+    "@types/jest": "^27.4.1",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^7.0.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.0.0",
+    "jest": "^27.5.1",
+    "log4js": "^6.4.2",
+    "pm2": "^5.0.0",
+    "rollup": "^2.68.0",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.31.2",
+    "ts-node": "^10.6.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.0.0"
+  }
+}
