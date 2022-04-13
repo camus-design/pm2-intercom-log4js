@@ -1,11 +1,24 @@
 {
   "name": "@takin/pm2-intercom-log4js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tool to solve log4js log synchronization in pm2 multithreading.",
   "keywords": [
+    "frontend",
+    "fe",
+    "node",
+    "nodejs",
+    "log",
+    "pm2-intercom",
     "pm2",
     "log4js",
-    "intercom"
+    "intercom",
+    "cluster",
+    "rpc",
+    "safe",
+    "protect",
+    "multithreading",
+    "multiprocess",
+    "synchronize"
   ],
   "main": "dist/index.min.js",
   "types": "types/index.d.ts",
