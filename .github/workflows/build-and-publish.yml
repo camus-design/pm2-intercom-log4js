@@ -49,4 +49,4 @@ jobs:
           tag_name: v${{ steps.package-version.outputs.version }}
           release_name: Release v${{ steps.package-version.outputs.version }}
           prerelease: false
-          body: 'Click [change log](https://github.com/BillionBottle/pm2-intercom-log4js/blob/main/CHANGELOG.md) to see more.'
+          body: 'Click [change log](https://github.com/camus-design/pm2-intercom-log4js/blob/main/CHANGELOG.md) to see more.'

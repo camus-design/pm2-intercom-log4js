@@ -1,9 +1,9 @@
 # pm2-intercom-log4js
 
-[![build](https://img.shields.io/github/workflow/status/BillionBottle/pm2-intercom-log4js/Build%20And%20Publish)](https://github.com/BillionBottle/pm2-intercom-log4js)
+[![build](https://img.shields.io/github/workflow/status/camus-design/pm2-intercom-log4js/Build%20And%20Publish)](https://github.com/camus-design/pm2-intercom-log4js)
 [![npm](https://img.shields.io/npm/v/@takin/pm2-intercom-log4js)](https://www.npmjs.com/package/@takin/pm2-intercom-log4js)
 [![node](https://img.shields.io/node/v/@takin/pm2-intercom-log4js)](https://www.npmjs.com/package/@takin/pm2-intercom-log4js)
-[![license](https://img.shields.io/github/license/BillionBottle/pm2-intercom-log4js)](https://github.com/BillionBottle/pm2-intercom-log4js)
+[![license](https://img.shields.io/github/license/camus-design/pm2-intercom-log4js)](https://github.com/camus-design/pm2-intercom-log4js)
 
 A tool to solve [log4js](https://github.com/log4js-node/log4js-node) log synchronization in <a href="https://github.com/Unitech/pm2" title="PM2">PM2</a>'s multiprocess mode.
 
@@ -11,14 +11,16 @@ English | [简体中文](README.zh-CN.md)
 
 ## Table of Contents
 
-- [Background](#background)
-- [Get Started](#get-started)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [API](#api)
-- [Example](#example)
-- [Contributing](#contributing)
-- [License](#license)
+- [pm2-intercom-log4js](#pm2-intercom-log4js)
+  - [Table of Contents](#table-of-contents)
+  - [Background](#background)
+  - [Get Started](#get-started)
+    - [Install](#install)
+    - [Usage](#usage)
+    - [API](#api)
+  - [Example](#example)
+  - [Contributing](#contributing)
+  - [License](#license)
 
 ## Background
 
@@ -33,7 +35,7 @@ pm2-intercom-log4js only exports one function, which is very convenient to use.
 This project uses [node](http://nodejs.org) and [npm](https://npmjs.com). Make sure that you have installed them locally.
 
 ```sh
-$ npm install @takin/pm2-intercom-log4js
+npm install @takin/pm2-intercom-log4js
 ```
 
 ### Usage
@@ -68,7 +70,7 @@ The `pm2Intercom` function above supports passing in an optional parameters obje
 We use PM2 to run the script in the `examples` directory and start two processes.
 
 ```sh
-$ pm2 start ./examples/index.js -i 2
+pm2 start ./examples/index.js -i 2
 ```
 
 When we don't use the `pm2Intercom` function (ie, comment out the `await pm2Intercom();` in the script), we see only one process successfully printing the log through the `pm2 logs` command.
@@ -99,8 +101,8 @@ xxx\.pm2\logs\index-out-0.log last 15 lines:
 
 ## Contributing
 
-You are very welcome to join us! [Submit an issue](https://github.com/BillionBottle/pm2-intercom-log4js/issues/new) or submit a pull request.
+You are very welcome to join us! [Submit an issue](https://github.com/camus-design/pm2-intercom-log4js/issues/new) or submit a pull request.
 
 ## License
 
-[MIT](LICENSE) © Billion Bottle
+[MIT](LICENSE) © Camus Design

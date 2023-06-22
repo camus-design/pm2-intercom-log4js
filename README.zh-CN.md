@@ -1,9 +1,9 @@
 # pm2-intercom-log4js
 
-[![build](https://img.shields.io/github/workflow/status/BillionBottle/pm2-intercom-log4js/Build%20And%20Publish)](https://github.com/BillionBottle/pm2-intercom-log4js)
+[![build](https://img.shields.io/github/workflow/status/camus-design/pm2-intercom-log4js/Build%20And%20Publish)](https://github.com/camus-design/pm2-intercom-log4js)
 [![npm](https://img.shields.io/npm/v/@takin/pm2-intercom-log4js)](https://www.npmjs.com/package/@takin/pm2-intercom-log4js)
 [![node](https://img.shields.io/node/v/@takin/pm2-intercom-log4js)](https://www.npmjs.com/package/@takin/pm2-intercom-log4js)
-[![license](https://img.shields.io/github/license/BillionBottle/pm2-intercom-log4js)](https://github.com/BillionBottle/pm2-intercom-log4js)
+[![license](https://img.shields.io/github/license/camus-design/pm2-intercom-log4js)](https://github.com/camus-design/pm2-intercom-log4js)
 
 一个解决 [PM2](https://github.com/Unitech/pm2) 多进程模式下 [log4js](https://github.com/log4js-node/log4js-node) 日志同步问题的工具。
 
@@ -11,14 +11,16 @@
 
 ## 目录
 
-- [背景](#背景)
-- [如何开始](#如何开始)
+- [pm2-intercom-log4js](#pm2-intercom-log4js)
+  - [目录](#目录)
+  - [背景](#背景)
+  - [如何开始](#如何开始)
     - [安装](#安装)
     - [使用](#使用)
     - [API](#api)
-- [示例](#示例)
-- [如何贡献](#如何贡献)
-- [使用许可](#使用许可)
+  - [示例](#示例)
+  - [如何贡献](#如何贡献)
+  - [使用许可](#使用许可)
 
 ## 背景
 
@@ -33,7 +35,7 @@ pm2-intercom-log4js 仅仅导出了一个函数，使用非常方便。
 这个项目使用了 [node](http://nodejs.org) 和 [npm](https://npmjs.com)。请确保你本地安装了它们。
 
 ```sh
-$ npm install @takin/pm2-intercom-log4js
+npm install @takin/pm2-intercom-log4js
 ```
 
 ### 使用
@@ -68,7 +70,7 @@ pm2Intercom().catch((err) => {
 我们使用 PM2 运行目录 `examples` 中的脚本并启动两个进程。
 
 ```sh
-$ pm2 start ./examples/index.js -i 2
+pm2 start ./examples/index.js -i 2
 ```
 
 当我们不使用 `pm2Intercom` 函数时（即将脚本中的 `await pm2Intercom();` 注释），我们通过 `pm2 logs` 命令看到只有一个进程成功打印了日志。
@@ -99,8 +101,8 @@ xxx\.pm2\logs\index-out-0.log last 15 lines:
 
 ## 如何贡献
 
-非常欢迎你的加入！[提一个 Issue](https://github.com/BillionBottle/pm2-intercom-log4js/issues/new) 或者提交一个 Pull Request。
+非常欢迎你的加入！[提一个 Issue](https://github.com/camus-design/pm2-intercom-log4js/issues/new) 或者提交一个 Pull Request。
 
 ## 使用许可
 
-[MIT](LICENSE) © Billion Bottle
+[MIT](LICENSE) © Camus Design
