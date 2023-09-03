@@ -1,6 +1,6 @@
 {
-  "name": "@takin/pm2-intercom-log4js",
-  "version": "1.0.2",
+  "name": "@camus-design/pm2-intercom-log4js",
+  "version": "1.0.3",
   "description": "A tool to solve log4js log synchronization in pm2 multithreading.",
   "keywords": [
     "frontend",

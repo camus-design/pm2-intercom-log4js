@@ -1,8 +1,8 @@
 # pm2-intercom-log4js
 
 [![build](https://img.shields.io/github/workflow/status/camus-design/pm2-intercom-log4js/Build%20And%20Publish)](https://github.com/camus-design/pm2-intercom-log4js)
-[![npm](https://img.shields.io/npm/v/@takin/pm2-intercom-log4js)](https://www.npmjs.com/package/@takin/pm2-intercom-log4js)
-[![node](https://img.shields.io/node/v/@takin/pm2-intercom-log4js)](https://www.npmjs.com/package/@takin/pm2-intercom-log4js)
+[![npm](https://img.shields.io/npm/v/@camus-design/pm2-intercom-log4js)](https://www.npmjs.com/package/@camus-design/pm2-intercom-log4js)
+[![node](https://img.shields.io/node/v/@camus-design/pm2-intercom-log4js)](https://www.npmjs.com/package/@camus-design/pm2-intercom-log4js)
 [![license](https://img.shields.io/github/license/camus-design/pm2-intercom-log4js)](https://github.com/camus-design/pm2-intercom-log4js)
 
 A tool to solve [log4js](https://github.com/log4js-node/log4js-node) log synchronization in <a href="https://github.com/Unitech/pm2" title="PM2">PM2</a>'s multiprocess mode.
@@ -35,7 +35,7 @@ pm2-intercom-log4js only exports one function, which is very convenient to use.
 This project uses [node](http://nodejs.org) and [npm](https://npmjs.com). Make sure that you have installed them locally.
 
 ```sh
-npm install @takin/pm2-intercom-log4js
+npm install @camus-design/pm2-intercom-log4js
 ```
 
 ### Usage
@@ -43,7 +43,7 @@ npm install @takin/pm2-intercom-log4js
 When running the program in PM2 multiprocess mode, pm2-intercom-log4js will automatically find and use PM2 to handle the communication between the processes. This process is asynchronous, so you need to wait for this process to finish before initializing log4js.
 
 ```javascript
-const pm2Intercom = require('@takin/pm2-intercom-log4js');
+const pm2Intercom = require('@camus-design/pm2-intercom-log4js');
 
 pm2Intercom().catch((err) => {
   // If the initialization fails, you can check the reason according to the error log. If it still cannot be solved, you can submit an issue.

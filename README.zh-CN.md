@@ -1,8 +1,8 @@
 # pm2-intercom-log4js
 
 [![build](https://img.shields.io/github/workflow/status/camus-design/pm2-intercom-log4js/Build%20And%20Publish)](https://github.com/camus-design/pm2-intercom-log4js)
-[![npm](https://img.shields.io/npm/v/@takin/pm2-intercom-log4js)](https://www.npmjs.com/package/@takin/pm2-intercom-log4js)
-[![node](https://img.shields.io/node/v/@takin/pm2-intercom-log4js)](https://www.npmjs.com/package/@takin/pm2-intercom-log4js)
+[![npm](https://img.shields.io/npm/v/@camus-design/pm2-intercom-log4js)](https://www.npmjs.com/package/@camus-design/pm2-intercom-log4js)
+[![node](https://img.shields.io/node/v/@camus-design/pm2-intercom-log4js)](https://www.npmjs.com/package/@camus-design/pm2-intercom-log4js)
 [![license](https://img.shields.io/github/license/camus-design/pm2-intercom-log4js)](https://github.com/camus-design/pm2-intercom-log4js)
 
 一个解决 [PM2](https://github.com/Unitech/pm2) 多进程模式下 [log4js](https://github.com/log4js-node/log4js-node) 日志同步问题的工具。
@@ -35,7 +35,7 @@ pm2-intercom-log4js 仅仅导出了一个函数，使用非常方便。
 这个项目使用了 [node](http://nodejs.org) 和 [npm](https://npmjs.com)。请确保你本地安装了它们。
 
 ```sh
-npm install @takin/pm2-intercom-log4js
+npm install @camus-design/pm2-intercom-log4js
 ```
 
 ### 使用
@@ -43,7 +43,7 @@ npm install @takin/pm2-intercom-log4js
 当我们通过 PM2 多进程模式运行程序时，pm2-intercom-log4js 会自动寻找并使用 PM2 处理好进程间的通信，这个过程是异步的，因此我们需要等待这个过程结束后再进行 log4js 的初始化。
 
 ```javascript
-const pm2Intercom = require('@takin/pm2-intercom-log4js');
+const pm2Intercom = require('@camus-design/pm2-intercom-log4js');
 
 pm2Intercom().catch((err) => {
   // 进程通信处理失败，可以根据错误日志检查原因，如果还是不能解决可以提一个 issue。
